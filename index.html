@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Youcef Bouchoucha – Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="pages-body">
+
+  <!-- Fixed top bar -->
+  <header class="top-bar">
+    <div class="logo-text">Youcef Bouchoucha</div>
+    <nav class="social-links">
+      <!-- Put your real links here -->
+      <a href="https://www.behance.net/" target="_blank" rel="noopener">Behance</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://dribbble.com/" target="_blank" rel="noopener">Dribbble</a>
+    </nav>
+  </header>
+
+  <!-- 01 Cover -->
+  <div class="page-wrapper" id="page-cover">
+    <img src="page 01.png" alt="Portfolio cover page" class="page-image" />
+  </div>
+
+  <!-- 02 About -->
+  <div class="page-wrapper" id="section-about">
+    <img src="page 02.png" alt="About me page" class="page-image" />
+  </div>
+
+  <!-- 03 Table of Contents WITH CLICKABLE AREAS -->
+<div class="page-wrapper" id="section-toc">
+  <img src="page 03.png"
+       alt="Table of contents page"
+       class="page-image"
+       usemap="#tocmap" />
+</div>
+
+<map name="tocmap">
+v
+  <!-- 01 Logo Folio area -->
+  <area shape="rect"
+        coords="200,380,350,350"
+        href="#section-logo"
+        alt="Logo Folio" />
+
+  <!-- 02 Branding area -->
+  <area shape="rect"
+        coords="68,21,6,3"
+        href="#section-branding"
+        alt="Branding" />
+
+  <!-- 03 Social Media area -->
+  <area shape="rect"
+        coords="-59,-21,6.5,3"
+        href="#section-social"
+        alt="Social Media" />
+
+  <!-- 04 Packaging area -->
+  <area shape="rect"
+        coords="-76,-16,6.5,3"
+        href="#section-packaging"
+        alt="Packaging" />
+</map>
+
+
+  <!-- Clickable TOC buttons under the TOC image -->
+  <nav class="toc-links">
+    <a href="#section-logo">01 Logo Folio</a>
+    <a href="#section-branding">02 Branding</a>
+    <a href="#section-social">03 Social Media</a>
+    <a href="#section-packaging">04 Packaging</a>
+  </nav>
+
+  <!-- 04 Logo Folio -->
+  <div class="page-wrapper" id="section-logo">
+    <img src="page 04.png" alt="Logo folio page" class="page-image" />
+  </div>
+<!-- 04 Logo Folio extra -->
+  <div class="page-wrapper" id="section-logo">
+    <img src="page 05.png" alt="Logo folio page" class="page-image" />
+  </div>
+
+
+  <!-- 06 Branding -->
+  <div class="page-wrapper" id="section-branding">
+    <img src="page 06.png" alt="Branding page" class="page-image" />
+  </div>
+
+<!-- 06 Branding extra-->
+  <div class="page-wrapper" id="section-branding">
+    <img src="page 07.png" alt="Branding page" class="page-image" />
+  </div>
+
+<!-- 06 Branding extra2-->
+  <div class="page-wrapper" id="section-branding">
+    <img src="page 08.png" alt="Branding page" class="page-image" />
+  </div>
+
+  <!-- 09 Social Media -->
+  <div class="page-wrapper" id="section-social">
+    <img src="page 09.png" alt="Social media page" class="page-image" />
+  </div>
+
+<!-- 09 Social Media extra-->
+  <div class="page-wrapper" id="section-social">
+    <img src="page 10.png" alt="Social media page" class="page-image" />
+  </div>
+
+<!-- 09 Social Media extra2-->
+  <div class="page-wrapper" id="section-social">
+    <img src="page 11.png" alt="Social media page" class="page-image" />
+  </div>
+
+  <!-- 12 Packaging -->
+  <div class="page-wrapper" id="section-packaging">
+    <img src="page 12.png" alt="Packaging page" class="page-image" />
+  </div>
+ <!-- 12 Packaging extra -->
+  <div class="page-wrapper" id="section-packaging">
+    <img src="page 13.png" alt="Packaging page" class="page-image" />
+  </div>
+
+<script>
+  const pages = document.querySelectorAll('.page-wrapper');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  pages.forEach(page => observer.observe(page));
+
+<!-- CONTACT / HIRE ME SECTION -->
+<section class="hire-section" id="contact">
+  <h2 class="hire-title">Let’s Work Together</h2>
+  <p class="hire-text">
+    For branding, packaging, social media design or UI work,<br>
+    feel free to reach out.
+  </p>
+  <a href="mailto:your@email.com" class="hire-button">
+    Contact Me
+  </a>
+</section>
+<section class="hire-section" id="contact">
+  <h2 class="hire-title">Let’s Work Together</h2>
+  <p class="hire-text">
+    For branding, packaging, social media design or UI work,<br>
+    feel free to reach out.
+  </p>
+  <a href="mailto:your@email.com" class="hire-button">
+    Contact Me
+  </a>
+</section>
+
+
+</body>
+</html>
